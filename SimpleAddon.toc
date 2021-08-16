@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: Simple Addon
+## Author: Shagu
+## Notes: A simple addon that helps you to understand. Open SimpleAddon.lua for details.
+## Version: 0.1
+SimpleAddon.lua
