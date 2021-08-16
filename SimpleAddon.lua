@@ -16,35 +16,27 @@ frame:SetScript("OnEvent",function()
   -- would become:
   GameTooltip:SetScale(1.7)
 
-  -- If you need to a specific addon command to trigger,
-  -- things get more complicated. First of all, you should
-  -- put your command into the SlashCommand brackets.
-  -- (If you want to dig deeper, have a look at the "SlashCommand"
-  -- function itself at the bottom)
-  --
+  -- If you want to trigger a specific addon command,
+  -- you'll need to put your command into the SlashCommand brackets.
   -- Here's an example:
   --   /db rares
   -- Would become:
   SlashCommand("/db rares")
+
+  -- That's all so far.
 end)
 
--- We now set the frame to run after each loading screen.
--- This event is called "PLAYER_ENTERING_WORLD".
--- If you want, you can add more events to the frame,
+-- We now set the frames function to run after each loading screen.
+-- The event for this is called "PLAYER_ENTERING_WORLD".
+-- If you want, you can add more events to the same frame,
 -- just copy the line and replace the event with the one
 -- you'd like to have. A list of evens can be found here:
 -- https://github.com/shagu/wow-vanilla-api/blob/master/events.md
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
--- Congratulations, you're done! If you want to learn more, read below
--- to understand what the SlashCommand function does in detail :)
-
--------------------------------------------------------------------------
-
--- This is the SlashCommand function. It takes a text and lets it run
--- through the chat input editbox, same as you would have typed it in
--- the chat.
-
+-- This is the SlashCommand function you used above.
+-- It takes a text and lets it run through the chat input editbox,
+-- same as you would have typed it in the chat.
 SlashCommand = function(text)
   -- Write your "text" into the editbox
   ChatFrameEditBox:SetText(text)
@@ -52,3 +44,8 @@ SlashCommand = function(text)
   -- Simulate a "Enter" key press on it
   ChatEdit_SendText(ChatFrameEditBox)
 end
+
+-- You're done! Congratulations!
+-- If you get any errors, the error message includes the
+-- Filename and the line number where the error happened.
+-- This helps you navigating to fix your mistake, if any.
