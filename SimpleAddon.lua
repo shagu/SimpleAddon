@@ -1,5 +1,6 @@
 -- This addon can be used to run macros on login.
--- At first, a frame is generated with is the most
+
+-- At first, a frame is generated, which is the most
 -- basic part of an addon. Second, the SlashCommand function
 -- is defined as "local" to not be polluting the global space
 -- (pollution in global space can cause other addons to misbehave)
